@@ -6,14 +6,12 @@ class Product {
   final String brand;
   final String thumbnailUrl;
 
-
-  Product(
-      {required this.id,
-      required this.title,
-      required this.description,
-      required this.price,
-      required this.brand,
-      required this.thumbnailUrl,
-  
-      });
+  Product({
+    required this.id,
+    required this.title,
+    required this.description,
+    required this.price,
+    required this.brand,
+    required this.thumbnailUrl,
+  });
 }

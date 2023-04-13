@@ -23,7 +23,6 @@ class ProductProvider extends ChangeNotifier {
           price: json['price'].toDouble(),
           brand: json['brand'],
           thumbnailUrl: json['thumbnail'],
-         
         );
       }).toList();
       notifyListeners();
@@ -38,17 +37,15 @@ class ProductProvider extends ChangeNotifier {
     if (response.statusCode == 200) {
       final dynamic productJson = jsonDecode(response.body);
       return Product(
-          id: productJson['id'],
-          title: productJson['title'],
-          description: productJson['description'],
-          price: productJson['price'].toDouble(),
-          thumbnailUrl: productJson['thumbnail'],
-          brand: productJson['brand'],
-        
-           );
+        id: productJson['id'],
+        title: productJson['title'],
+        description: productJson['description'],
+        price: productJson['price'].toDouble(),
+        thumbnailUrl: productJson['thumbnail'],
+        brand: productJson['brand'],
+      );
     } else {
       throw Exception('Failed to load product');
     }
   }
-
 }

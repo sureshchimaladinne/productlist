@@ -44,10 +44,7 @@ class ProductDetailsScreen extends StatelessWidget {
                     Text('Price:${product.price.toStringAsFixed(2)}'),
                       const SizedBox(height: 16),
                     Text('Description: ${product.description}'),
-                      const SizedBox(height: 16),
-                  
-                    
-                    
+                      const SizedBox(height: 16), 
                   ],
                 ),
               );
