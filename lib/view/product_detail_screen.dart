@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 
 import 'package:provider/provider.dart';
 
-import '../model/product_list.dart';
+import '../model/product.dart';
+
 import '../view_model/product_list_view_model.dart';
 
 class ProductDetailsScreen extends StatelessWidget {
@@ -32,13 +33,21 @@ class ProductDetailsScreen extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
+                       Text('Product ID: ${product.id}'),
+                      const SizedBox(height: 16),
                     Image.network(product.thumbnailUrl),
-                    const SizedBox(height: 16),
-                    Text('Title:  ${product.title}'),
-                    const SizedBox(height: 16),
-                    Text('Description:  ${product.description}'),
-                    const SizedBox(height: 16),
-                    Text('Price:  ${product.price.toStringAsFixed(2)}'),
+                     const SizedBox(height: 16),
+                    Text('Title: ${product.title}'),
+                     const SizedBox(height: 16),
+                    Text('Brand: ${product.brand}'),
+                     const SizedBox(height: 16),
+                    Text('Price:${product.price.toStringAsFixed(2)}'),
+                      const SizedBox(height: 16),
+                    Text('Description: ${product.description}'),
+                      const SizedBox(height: 16),
+                  
+                    
+                    
                   ],
                 ),
               );

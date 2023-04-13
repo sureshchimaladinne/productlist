@@ -1,17 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:productlist/view/product_detail_screen.dart';
 import 'package:provider/provider.dart';
-
 import '../view_model/product_list_view_model.dart';
-
 class ProductsListScreen extends StatelessWidget {
   const ProductsListScreen({super.key});
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Products'),
+        centerTitle: true,
       ),
       body: Consumer<ProductProvider>(
         builder: (_, provider, __) {
@@ -41,13 +39,13 @@ class ProductsListScreen extends StatelessWidget {
                   ),
                   onTap: () {
                     Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) =>
-                            ProductDetailsScreen(productId: product.id),
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => ProductDetailsScreen(productId: product.id),
                       ),
                     );
                   },
+                 
                 );
               },
             );
